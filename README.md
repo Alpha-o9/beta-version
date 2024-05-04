@@ -2,6 +2,9 @@
 
 <p align="center"><img src="https://socialify.git.ci/Alpha-o9/beta-version/image?description=1&amp;font=Source%20Code%20Pro&amp;forks=1&amp;issues=1&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Circuit%20Board&amp;pulls=1&amp;stargazers=1&amp;theme=Dark" alt="project-image"></p>
 
+## Getting Started
+
+
 <p id="description">Alpha is your go-to social networking platform for connecting with fellow college mates and faculty members. Stay updated on college announcements events and projects. Collaborate share ideas and find teammates for hackathons and competitions. Join Alpha and be part of your college's vibrant online community!</p>
 
   
@@ -11,7 +14,7 @@
 Here're some of the project's best features:
 
 *   Social Networking Platform
-*   User Profiles
+*   User Profiles<<<<<<< nithin
 *   Connect with Peers
 *   Faculty Interaction
 *   Post Sharing
