@@ -14,7 +14,7 @@
 Here're some of the project's best features:
 
 *   Social Networking Platform
-*   User Profiles<<<<<<< nithin
+*   User Profiles
 *   Connect with Peers
 *   Faculty Interaction
 *   Post Sharing
