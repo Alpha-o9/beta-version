@@ -1,3 +1,4 @@
+import React from 'react';
 import {BsHouseFill,BsBellFill} from 'react-icons/bs';
 import {FaUser} from 'react-icons/fa';
 import { FaSuitcase } from "react-icons/fa";
@@ -6,7 +7,7 @@ import SidebarItem from './SidebarItem';
 import {BiLogOut} from 'react-icons/bi';
 
 
-const sidebar = ()=>{
+const Sidebar = ()=>{
     const items = [
         {
             label:'Home',
@@ -47,4 +48,4 @@ const sidebar = ()=>{
 
 }
 
-export default sidebar
+export default Sidebar
