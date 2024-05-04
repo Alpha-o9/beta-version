@@ -8,6 +8,7 @@ const SidebarLogo = ()=>{
             w-14
             h-14
             p-4
+            pl-6
             flex
             items-center
             justify center
