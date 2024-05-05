@@ -8,8 +8,8 @@ interface registerModalStore{
 
 const useRegisterModal = create<registerModalStore>((set)=>({
     isOpen:false,
-    onOpen: ()=>set({isOpen:true}),
-    onClose: ()=>set({isOpen:false})
+    onOpen: () => set({isOpen:true}),
+    onClose: () => set({isOpen:false})
 }));
 
 export default useRegisterModal;
