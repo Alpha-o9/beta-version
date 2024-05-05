@@ -1,10 +1,10 @@
 import React from 'react';
 import {BsHouseFill,BsBellFill} from 'react-icons/bs';
 import {FaUser} from 'react-icons/fa';
-import { FaSuitcase } from "react-icons/fa";
+import {FaSuitcase} from "react-icons/fa";
+import {BiLogOut} from 'react-icons/bi';
 import SidebarLogo from './SidebarLogo';
 import SidebarItem from './SidebarItem';
-import {BiLogOut} from 'react-icons/bi';
 
 
 const Sidebar = ()=>{
@@ -25,6 +25,10 @@ const Sidebar = ()=>{
             label:'Profile',
             href:'/users/123',
             icon:FaUser
+        },{
+            label:'Logout',
+            href:'/switch-accounts',
+            icon:BiLogOut
         }
     ];
     return (
@@ -40,7 +44,7 @@ const Sidebar = ()=>{
                         icon = {item.icon} 
                     />
                     ))}
-                     <SidebarItem onClick = {()=>{}} icon = {BiLogOut} />
+                
                 </div>
             </div>
         </div>

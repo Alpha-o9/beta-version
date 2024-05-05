@@ -1,13 +1,13 @@
 import {create} from 'zustand';
 
-interface loginModalStore{
+interface LoginModalStore{
     isOpen:boolean;
     onOpen: ()=>void;
     onClose: ()=>void;
 };
 
-const useLoginModal = create<loginModalStore>((set)=>({
-    isOpen:false,
+const useLoginModal = create<LoginModalStore>((set)=>({
+    isOpen:true,
     onOpen: ()=>set({isOpen:true}),
     onClose: ()=>set({isOpen:false})
 }));
