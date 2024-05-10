@@ -3,6 +3,9 @@ import {BsHouseFill,BsBellFill} from 'react-icons/bs';
 import {FaUser} from 'react-icons/fa';
 import {FaSuitcase} from "react-icons/fa";
 import {BiLogOut} from 'react-icons/bi';
+import { FaUserFriends } from "react-icons/fa";
+import { FiPlusSquare } from "react-icons/fi";
+import { IoSearch } from "react-icons/io5";
 import SidebarLogo from './SidebarLogo';
 import SidebarItem from './SidebarItem';
 
@@ -14,6 +17,14 @@ const Sidebar = ()=>{
             href:'/',
             icon:BsHouseFill
         },{
+            label:'Connections',
+            href:'/connections',
+            icon:FaUserFriends
+        },{
+            label:'Search',
+            href:'/search',
+            icon:IoSearch
+        },{
             label:'Notifications',
             href:'/notifications',
             icon:BsBellFill
@@ -21,6 +32,10 @@ const Sidebar = ()=>{
             label:'Jobs',
             href:'/jobs',
             icon:FaSuitcase
+        },{
+            label:'Create',
+            href:'/create',
+            icon:FiPlusSquare
         },{
             label:'Profile',
             href:'/users/123',
