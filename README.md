@@ -31,13 +31,20 @@ Here're some of the project's best features:
 
 <h2>🛠️ Installation Steps:</h2>
 
-<p>1. First run the development server:</p>
+<p>1. Install all the Packages</p>
+
+```
+npm install
+or
+npm i
+```
+<p>2. Run run the development server:</p>
 
 ```
 npm run dev
 ```
 
-<p>2. Open localhost with your browser to see the result.</p>
+<p>3. Open localhost with your browser to see the result.</p>
 
 ```
 http://localhost:3000
@@ -54,6 +61,7 @@ Please contribute using GitHub Flow. Create a branch add commits and open a pull
 Technologies used in the project:
 
 *   React
+*   Next
 *   Tailwind.css
 *   Firebase
 *   MonogoDB
