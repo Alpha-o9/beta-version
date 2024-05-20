@@ -1,10 +1,13 @@
 import React from 'react';
 import {BsHouseFill,BsBellFill} from 'react-icons/bs';
 import {FaUser} from 'react-icons/fa';
-import { FaSuitcase } from "react-icons/fa";
+import {FaSuitcase} from "react-icons/fa";
+import {BiLogOut} from 'react-icons/bi';
+import { FaUserFriends } from "react-icons/fa";
+import { FiPlusSquare } from "react-icons/fi";
+import { IoSearch } from "react-icons/io5";
 import SidebarLogo from './SidebarLogo';
 import SidebarItem from './SidebarItem';
-import {BiLogOut} from 'react-icons/bi';
 
 
 const Sidebar = ()=>{
@@ -14,6 +17,14 @@ const Sidebar = ()=>{
             href:'/',
             icon:BsHouseFill
         },{
+            label:'Connections',
+            href:'/connections',
+            icon:FaUserFriends
+        },{
+            label:'Search',
+            href:'/search',
+            icon:IoSearch
+        },{
             label:'Notifications',
             href:'/notifications',
             icon:BsBellFill
@@ -22,9 +33,17 @@ const Sidebar = ()=>{
             href:'/jobs',
             icon:FaSuitcase
         },{
+            label:'Create',
+            href:'/create',
+            icon:FiPlusSquare
+        },{
             label:'Profile',
             href:'/users/123',
             icon:FaUser
+        },{
+            label:'Logout',
+            href:'/switch-accounts',
+            icon:BiLogOut
         }
     ];
     return (
@@ -40,7 +59,7 @@ const Sidebar = ()=>{
                         icon = {item.icon} 
                     />
                     ))}
-                     <SidebarItem onClick = {()=>{}} icon = {BiLogOut} />
+                
                 </div>
             </div>
         </div>

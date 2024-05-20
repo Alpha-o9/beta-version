@@ -37,7 +37,7 @@ const Button:React.FC<ButtonProps> = ({
                 ${outline ? 'bg-transparent border-white text-white' : ''}
             `}>
                 {label}
-        </buton>
+        </button>
         );
 };
 
