@@ -154,5 +154,3 @@ const LoginModal = () => {
 }
 
 export default LoginModal;
-
-console.log("hello")
