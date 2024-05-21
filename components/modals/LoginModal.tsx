@@ -186,11 +186,11 @@ const LoginModal = () => {
         try {
             setIsLoading(true);
 
-            // Authentication logic here
+            // Authentication logic here ToDo Login
 
             loginModal.onClose();
         } catch (error) {
-            console.error(error);
+            console.log(error);
         } finally {
             setIsLoading(false);
         }
@@ -199,13 +199,13 @@ const LoginModal = () => {
     const bodyContent = (
         <div className="flex flex-col gap-4">
             <Input
-                placeholder="Enter your email"
+                placeholder="Email"
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
                 disabled={isLoading}
             />
             <Input
-                placeholder="Enter your password"
+                placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
                 disabled={isLoading}
