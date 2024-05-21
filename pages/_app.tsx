@@ -4,6 +4,7 @@ import Layout from '@/components/Layout'
 import Header from '@/components/Header';
 import loginModal from '@/components/modals/LoginModal'
 import RegisterModal from '@/components/modals/RegisterModal'
+//import Modal from '@/components/Modal';
 
 export default function App({ Component,pageProps }:AppProps){
     return(
