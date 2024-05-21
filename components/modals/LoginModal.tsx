@@ -170,9 +170,10 @@ import Modal from '../Modal';
 const LoginModal = () => {
     const loginModal = useLoginModal();
     const registerModal = useRegisterModal();
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState('');
 
     const onToggle = useCallback(() => {
         if (isLoading) {

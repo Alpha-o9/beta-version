@@ -1,11 +1,21 @@
 import {useRouter} from 'next/router';
 import {FaSignInAlt} from 'react-icons/fa';
 import {FaFeather} from 'react-icons/fa';
-const sideBarLoginButton = () => {
+import useLoginModal from '@/hooks/useLoginModal'; 
+
+import {useCallback} from 'react';
+
+const sidebarLoginButton = () => {
     const router = useRouter();
+    const loginModal = useLoginModal();
+
+    const onClick = useCallback (()=>{
+        loginModal.onOpen();
+
+    },[loginModal])
 
     return(
-        <div onClick = {() => router.push('/')}>
+        <div onClick = {onClick}>
             <div className = "
                 mt-6
                 lg:hidden
@@ -21,7 +31,6 @@ const sideBarLoginButton = () => {
                 transition
                 cursor-pointer
                 ">
-                   {/* <FaSignInAlt size = {24} color = "white" />*/}
                    <FaFeather size = {24} colot = "white" />
                 </div>
                 <div className = "
@@ -46,9 +55,8 @@ const sideBarLoginButton = () => {
                             ">Sign In </p>
                     
                     </div>
-
         </div>
     )
 }
 
-export default sideBarLoginButton;
+export default sidebarLoginButton;
