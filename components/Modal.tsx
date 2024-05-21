@@ -169,7 +169,7 @@ const Modal: React.FC<ModalProps> = ({
     }
     return (
         <>
-            <div className="
+            <div  className="
                 justify-center
                 items-center
                 flex
@@ -208,15 +208,13 @@ const Modal: React.FC<ModalProps> = ({
                         {/*Header*/}
                         <div className="
                             flex
-                            items-top
+                            items-center
                             justify-between
-                            p-5
+                            p-10
                             rounded-t">
                             <h3 className="text-3xl font-semibold text-white">{title}</h3>
                             <button onClick={handleClose}
                                 className="
-                                flex
-                                items-top
                                 p-1
                                 ml-auto
                                 border-0
@@ -239,6 +237,7 @@ const Modal: React.FC<ModalProps> = ({
                                 fullwidth
                                 large
                                 onClick={handleSubmit} />
+                                {footer }
                         </div>
                     </div>
                 </div>
