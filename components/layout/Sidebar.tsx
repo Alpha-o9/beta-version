@@ -11,8 +11,8 @@ import { IoSearch } from "react-icons/io5";
 import SidebarLogo from './SidebarLogo';
 import SidebarItem from './SidebarItem';
 //import sideBarLoginButton from './sideBarLoginButton';
-import sideBarLoginButton from './sideBarLoginButton';
-
+//import sidebarLoginButton from './sidebarLoginButton';
+import sidebarLoginButton from './sidebarLoginButton';
 const Sidebar = ()=>{
     const items = [
         {
@@ -63,7 +63,7 @@ const Sidebar = ()=>{
                     />
                     ))}
                    {/* <SidebarItem onClick = {()=>{} icon = {BiLogOut} label="Logout"} />*/}
-                    <sideBarLoginButton />
+                    <sidebarLoginButton />
                 </div>
             </div>
         </div>
