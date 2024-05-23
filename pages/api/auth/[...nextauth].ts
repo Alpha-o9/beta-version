@@ -31,7 +31,7 @@ export default NextAuth({
 
                 const isCorrectPassword = await bcrypt.compare(
                     credentials.password,
-                    user.hashedpassword
+                    user.hashedPassword
                 );
 
 
