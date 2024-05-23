@@ -1,5 +1,6 @@
-import { genSaltSync, hashSync } from "bcrypt-ts";
-import NextAuth from 'next-auth'
+import { hash,compare } from "bcrypt-ts";
+import bcrypt from 'bcrypt';
+import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import {PrimsaAdapter} from '@next-auth/prisma-adapter';
 
@@ -29,7 +30,7 @@ export default NextAuth({
                     throw new Error('Invalid Credentials');
                 }
 
-                const isCorrectPassword = await bcrypt.compare(
+                const isCorrectPassword = await compare(
                     credentials.password,
                     user.hashedPassword
                 );

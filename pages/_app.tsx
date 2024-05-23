@@ -14,7 +14,7 @@ import RegisterModal from '@/components/modals/RegisterModal'
 
 export default function App({ Component,pageProps }:AppProps){
     return(
-        <SessionProvider sessio={pageProps.session}>
+        <SessionProvider session={pageProps.session}>
             <Toaster />
             <RegisterModal />
             <LoginModal />
