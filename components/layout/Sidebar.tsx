@@ -13,6 +13,7 @@ import SidebarItem from './SidebarItem';
 //import sideBarLoginButton from './sideBarLoginButton';
 //import sidebarLoginButton from './sidebarLoginButton';
 import sidebarLoginButton from './sidebarLoginButton';
+
 const Sidebar = ()=>{
     const items = [
         {
@@ -62,7 +63,7 @@ const Sidebar = ()=>{
                         icon = {item.icon} 
                     />
                     ))}
-                   {/* <SidebarItem onClick = {()=>{} icon = {BiLogOut} label="Logout"} />*/}
+                    {/*<SidebarItem onClick = {()=>{} icon = {BiLogOut} label="Logout"} />*/}
                     <sidebarLoginButton />
                 </div>
             </div>
