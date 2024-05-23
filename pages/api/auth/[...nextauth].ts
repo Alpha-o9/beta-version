@@ -1,4 +1,4 @@
-import bcrypt from 'brcypt';
+import { genSaltSync, hashSync } from "bcrypt-ts";
 import NextAuth from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials';
 import {PrimsaAdapter} from '@next-auth/prisma-adapter';

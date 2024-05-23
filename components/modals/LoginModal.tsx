@@ -173,7 +173,7 @@ const LoginModal = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [isLoading, setIsLoading] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
 
     const onToggle = useCallback(() => {
         if (isLoading) {

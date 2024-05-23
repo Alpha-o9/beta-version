@@ -84,6 +84,7 @@ export default LoginModal;
 import useLoginModal from '@/hooks/useLoginModal';
 import useRegisterModal from '@/hooks/useRegisterModal';
 import { useState, useCallback } from 'react';
+import axios from 'axios';
 import Input from '../Input';
 import Modal from '../Modal';
 
@@ -94,8 +95,8 @@ const RegisterModal = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [name,setName]  = useState('');
-    const [userName,setUserName] = useState('');
-    const [isLoading, setIsLoading] = useState('');
+    const [username,setUserName] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
 
     const onToggle = useCallback(() => {
         if (isLoading) {
@@ -109,15 +110,22 @@ const RegisterModal = () => {
         try {
             setIsLoading(true);
 
+            await axios.post('/api/register',{
+                eamil,
+                password,
+                username,
+                name
+            })
+
             // Authentication logic here ToDo Register
 
-            RegisterModal.onClose();
+            registerModal.onClose();
         } catch (error) {
             console.log(error);
         } finally {
             setIsLoading(false);
         }
-    }, [registerModal]);
+    }, [registerModal,email,password,username,name]);
 
     const bodyContent = (
         <div className="flex flex-col gap-4">
@@ -136,7 +144,7 @@ const RegisterModal = () => {
             <Input 
                 placeholder = "Username"
                 onChange = {(e)=>setUserName(e.target.value)}
-                value = {userName}
+                value = {username}
                 disabled = {isLoading}
                 />
             
