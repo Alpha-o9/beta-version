@@ -15,6 +15,7 @@
     "bcrypt-ts": "^5.0.2",
     "bcryptjs": "^2.4.3",
     "firebase": "^10.12.1",
+    "mongodb": "^6.6.2",
     "next": "14.1.4",
     "next-auth": "^4.24.7",
     "react": "^18",
