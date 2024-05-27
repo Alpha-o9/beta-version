@@ -41,7 +41,7 @@ const Sidebar = ()=>{
             icon:FiPlusSquare
         },{
             label:'Profile',
-            href:'/profile-ui',
+            href:'/profile',
             icon:FaUser
         }
     ];
