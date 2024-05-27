@@ -10,9 +10,8 @@ import { IoSearch } from "react-icons/io5";
 
 import SidebarLogo from './SidebarLogo';
 import SidebarItem from './SidebarItem';
-//import sideBarLoginButton from './sideBarLoginButton';
-//import sidebarLoginButton from './sidebarLoginButton';
-import sidebarLoginButton from './sidebarLoginButton';
+import sideBarAccount from './Sidebaraccount';
+
 
 const Sidebar = ()=>{
     const items = [
@@ -44,10 +43,6 @@ const Sidebar = ()=>{
             label:'Profile',
             href:'/users/123',
             icon:FaUser
-        },{
-            label:'Logout',
-            href:'/switch-accounts',
-            icon:BiLogOut
         }
     ];
     return (
@@ -55,6 +50,7 @@ const Sidebar = ()=>{
             <div className="flex flex-col items-end">
                 <div className="space-y-2 lg:w-[230px]">
                     <SidebarLogo />
+                    <sideBarAccount />
                     {items.map((item)=>(
                         <SidebarItem
                         key = {item.href}
@@ -63,12 +59,12 @@ const Sidebar = ()=>{
                         icon = {item.icon} 
                     />
                     ))}
-                    {/*<SidebarItem onClick = {()=>{} icon = {BiLogOut} label="Logout"} />*/}
-                    <sidebarLoginButton />
+                
                 </div>
             </div>
         </div>
-    );
+    )
+
 }
 
-export default Sidebar;
+export default Sidebar
