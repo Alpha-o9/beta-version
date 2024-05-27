@@ -61,7 +61,7 @@ Please contribute using GitHub Flow. Create a branch add commits and open a pull
 Technologies used in the project:
 
 *   React
-*   Next
+*   Next.js
 *   Tailwind.css
 *   Firebase
 *   MonogoDB
