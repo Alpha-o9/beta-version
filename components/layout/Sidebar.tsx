@@ -10,7 +10,7 @@ import { IoSearch } from "react-icons/io5";
 
 import SidebarLogo from './SidebarLogo';
 import SidebarItem from './SidebarItem';
-import sideBarAccount from './Sidebaraccount';
+import SigninUi from './SignnUi';
 
 
 const Sidebar = ()=>{
@@ -41,7 +41,7 @@ const Sidebar = ()=>{
             icon:FiPlusSquare
         },{
             label:'Profile',
-            href:'/users/123',
+            href:'/profile',
             icon:FaUser
         }
     ];
@@ -49,8 +49,10 @@ const Sidebar = ()=>{
         <div className="col-span-1 h-full pr-4 md:pr-6">
             <div className="flex flex-col items-end">
                 <div className="space-y-2 lg:w-[230px]">
+                
                     <SidebarLogo />
-                    <sideBarAccount />
+                    <SigninUi />
+                    
                     {items.map((item)=>(
                         <SidebarItem
                         key = {item.href}
