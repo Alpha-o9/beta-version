@@ -1,5 +1,8 @@
 import {useRouter} from 'next/router';
-import { BsYinYang } from "react-icons/bs";
+//import { BsYinYang } from "react-icons/bs";
+//import { GrTurbolinux } from "react-icons/gr";
+//import { FaLinux } from "react-icons/fa";
+import { SiVoidlinux } from "react-icons/si";
 
 
 const SidebarLogo = ()=>{
@@ -18,7 +21,7 @@ const SidebarLogo = ()=>{
             hover:bg-opacity-10
             cursor-pointer
             transition">
-        <BsYinYang size = {24} color = "white" />
+        <SiVoidlinux size = {24} color='white'/>
         </div>
 
     );

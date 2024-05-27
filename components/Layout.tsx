@@ -1,5 +1,6 @@
-import Sidebar from './layout/Sidebar'
-import FollowBar from './layout/FollowBar'
+import Sidebar from './layout/Sidebar';
+import FollowBar from './layout/FollowBar';
+import SigninUi from './layout/SignnUi';
 
 
 interface LayoutProps{
@@ -20,6 +21,7 @@ const Layout:React.FC<LayoutProps> = ({children})=>{
                         {children}
                     </div>
                         <FollowBar />
+                        {/*<SigninUi />*/}
                 </div>
             </div>
 
