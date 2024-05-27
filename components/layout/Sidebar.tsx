@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {BsHouseFill,BsBellFill} from 'react-icons/bs';
 import {FaUser} from 'react-icons/fa';
 import {FaSuitcase} from "react-icons/fa";
@@ -6,8 +7,10 @@ import {BiLogOut} from 'react-icons/bi';
 import { FaUserFriends } from "react-icons/fa";
 import { FiPlusSquare } from "react-icons/fi";
 import { IoSearch } from "react-icons/io5";
+
 import SidebarLogo from './SidebarLogo';
 import SidebarItem from './SidebarItem';
+import sideBarAccount from './Sidebaraccount';
 
 
 const Sidebar = ()=>{
@@ -40,10 +43,6 @@ const Sidebar = ()=>{
             label:'Profile',
             href:'/users/123',
             icon:FaUser
-        },{
-            label:'Logout',
-            href:'/switch-accounts',
-            icon:BiLogOut
         }
     ];
     return (
@@ -51,6 +50,7 @@ const Sidebar = ()=>{
             <div className="flex flex-col items-end">
                 <div className="space-y-2 lg:w-[230px]">
                     <SidebarLogo />
+                    <sideBarAccount />
                     {items.map((item)=>(
                         <SidebarItem
                         key = {item.href}
