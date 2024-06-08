@@ -1,5 +1,5 @@
-import bcrypt from 'brcypt';
-import NextAuth from '/next-auth'
+import bcrypt from 'bcrypt';
+import NextAuth from 'next-auth'
 import CredentialProvider from 'next-auth/providers/credentials';
 import {PrimsaAdapter} from '@/next-auth/prisma-adapter';
 import prisma from '@/libs/prismadb';
