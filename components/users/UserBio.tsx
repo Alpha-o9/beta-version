@@ -1,10 +1,12 @@
 import {format} from 'date-fns';
 import {useMemo} from 'react';
 
+import {BiCalendar} from 'react-icons/Bi';
+
 import useCurrentUser from '@/hooks/useCurrentUser';
+import useEditModal from '@/hooks/useEditModal';
 import useUser from '@/hooks/useUser';
 import Button from '../Button';
-import {BiCalendar} from 'react-icons/Bi';
 
 
 interface UserBioProps{
@@ -15,6 +17,8 @@ const UserBio:REACT.FC<UserBioProps> = ({userId})=>{
     
     const {data:currentUser} = useCurrentUser();
     const {data:fetchedUser} = useUser(userId);
+
+    const editModal = useEditModal();
 
     const createdAt = useMemo(()=>{
         if(!fetchedUser?.createAt){
@@ -29,7 +33,7 @@ const UserBio:REACT.FC<UserBioProps> = ({userId})=>{
             <div className = "flex justify-end p-2">
                 {
                     currentUser?.id === userId ? (
-                        <Button secondary label="edit" onClick = {()=>{}} />
+                        <Button secondary label="edit" onClick = {()=>{editModal.onOpen}} />
                     ):(
                         <Button onClick={()=>{}} label = "follow" secondary />
                     )}

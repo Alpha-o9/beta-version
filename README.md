@@ -63,6 +63,6 @@ Technologies used in the project:
 *   React
 *   Next.js
 *   Tailwind.css
-*   Clerk
+*   NextAuth
 *   MonogoDB
 *   Prisma
