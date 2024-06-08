@@ -1,6 +1,8 @@
 import {create} from 'zustand';
 
-interface registerModalStore{
+
+interface RegisterModalStore{
+
     isOpen:boolean;
     onOpen: ()=>void;
     onClose: ()=>void;

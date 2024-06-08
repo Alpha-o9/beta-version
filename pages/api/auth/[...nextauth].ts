@@ -1,26 +1,28 @@
-import bcrypt from 'brcypt';
-import NextAuth from '/next-auth'
-import CredentialProvider from 'next-auth/providers/credentials';
-import {PrimsaAdapter} from '@/next-auth/prisma-adapter';
+import { hash,compare } from "bcrypt-ts";
+import bcrypt from 'bcrypt';
+import NextAuth from 'next-auth';
+import CredentialsProvider from 'next-auth/providers/credentials';
+import {PrimsaAdapter} from '@next-auth/prisma-adapter';
+
 import prisma from '@/libs/prismadb';
 
 export default NextAuth({
     adapter: PrismaAdapter(prisma),
     providers: [
-        CredentialProvider({
+        CredentialsProvider({
             name : 'credentials',
             credentials:{
                 email:{label:'email',type:'text'},
-                password:{label:'password',type:'text'},
+                password:{label:'password',type:'password'},
             },
             async authorize(credentials){
-                if(!credentials?.emial || !credentials?.password){
+                if(!credentials?.email || !credentials?.password){
                     throw new Error('Invalid Credentials');
                 }
 
                 const user = await prisma.user.findUnique({
                     where: {
-                        email: credential.email
+                        email: credentials.email
                     }
                 });
 
@@ -28,9 +30,9 @@ export default NextAuth({
                     throw new Error('Invalid Credentials');
                 }
 
-                const isCorrectPassword = await bcrypt.compare(
+                const isCorrectPassword = await compare(
                     credentials.password,
-                    userr.hashedpassword
+                    user.hashedPassword
                 );
 
 
@@ -42,7 +44,7 @@ export default NextAuth({
             }
         })
     ],
-    debug: process.env.NODE_ENV != 'development',
+    debug: process.env.NODE_ENV == 'development',
     session:{
         strategy:'jwt'
     },
