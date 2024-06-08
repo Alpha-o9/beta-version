@@ -10,7 +10,6 @@ import { IoSearch } from "react-icons/io5";
 
 import SidebarLogo from './SidebarLogo';
 import SidebarItem from './SidebarItem';
-import SigninUi from './SignnUi';
 
 
 const Sidebar = ()=>{
@@ -51,7 +50,6 @@ const Sidebar = ()=>{
                 <div className="space-y-2 lg:w-[230px]">
                 
                     <SidebarLogo />
-                    <SigninUi />
                     
                     {items.map((item)=>(
                         <SidebarItem
