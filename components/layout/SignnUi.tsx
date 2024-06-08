@@ -1,4 +1,4 @@
-import {SignInButton,SignedIn,UserButton} from '@clerk/nextjs';
+import {SignInButton,SignedIn,SignedOut,UserButton} from '@clerk/nextjs';
 
 export default function SigninUi(){
     return(
@@ -15,9 +15,24 @@ export default function SigninUi(){
                         hover:bg-opacity-10
                         cursor-pointer
                         transition">
-            <SignedIn>
-                <UserButton showName />
-            </SignedIn>
+                <div>
+                    <ul>
+                        <li>
+                            <SignedIn>
+                                <UserButton showName />
+                            </SignedIn>
+                        </li>
+                        <li>
+                            <SignedOut>
+                                <div>
+                                    <SignInButton>
+                                        <button />
+                                    </SignInButton>
+                                </div>
+                            </SignedOut>
+                        </li>
+                    </ul>
+                </div>
         </div>
     )
 }
