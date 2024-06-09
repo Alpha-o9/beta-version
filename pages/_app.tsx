@@ -18,7 +18,6 @@ export default function App({ Component,pageProps }:AppProps){
             <Layout>
                 <component {...pageProps} />
             </Layout>
-
         </SessionProvider>
     )
 }
