@@ -1,4 +1,5 @@
-import {useEffect,useState} from 'react';
+import {useEffect,useState,useCallback} from 'react';
+import toast from 'react-hot-toast';
 
 import useCurrentUser from '@/hooks/useCurrentUser';
 import useEditModal from '@/hooks/useEditModal';
@@ -6,6 +7,8 @@ import useUser from '@/hooks/useUser';
 import Modal from '../Modal';
 import Input from '../Input';
 import ImageUpload from '../ImageUpload';
+
+
 const EditModal = ()=> {
     
     const {data:currentUser} = useCurrentUser();
@@ -92,8 +95,8 @@ const EditModal = ()=> {
             title='Edit Your profile'
             actionlabel='Save'
             onClose={editModal.onClose}
-            onSubmit={onSubmit}/>
-            body = {bodyContent}
+            onSubmit={onSubmit}
+            body = {bodyContent} />
     )
 }
 
