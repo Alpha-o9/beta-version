@@ -1,4 +1,3 @@
-
 import useLoginModal from '@/hooks/useLoginModal';
 import useRegisterModal from '@/hooks/useRegisterModal';
 import {useState,useCallback} from 'react';
