@@ -30,7 +30,7 @@ export default NextAuth({
 
                 const isCorrectPassword = await bcrypt.compare(
                     credentials.password,
-                    userr.hashedpassword
+                    user.hashedpassword
                 );
 
 
@@ -42,7 +42,7 @@ export default NextAuth({
             }
         })
     ],
-    debug: process.env.NODE_ENV != 'development',
+    debug: process.env.NODE_ENV === 'development',
     session:{
         strategy:'jwt'
     },

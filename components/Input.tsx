@@ -38,7 +38,8 @@ const Input:React.FC<InputProps> = ({
                 transition
                 disabled:bg-natural-900
                 disabled:opacity-70
-                disabled:cursor-not-allowed" />
+                disabled:cursor-not-allowed" 
+        />
     );
 }
 
