@@ -21,14 +21,17 @@ const LoginModal = () => {
         }
         registerModal.onOpen();
         loginModal.onClose();
-        
+
     },[isLoading,registerModal,loginModal]);
 
     const onSubmit = useCallback (async () => {
         try{
             setIsLoading(true);
 
-            //authentication
+            await signIn('credentials',{
+                email,
+                password
+            })            
 
             loginModal.onClose();
         }catch(error){
@@ -48,6 +51,7 @@ const LoginModal = () => {
                 />
             <Input 
                 placeholder="Password"
+                type="password"
                 onChange={(e) => setPassword(e.target.value)}
                 value = {password}
                 disabled = {isLoading}
