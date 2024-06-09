@@ -1,5 +1,5 @@
 import {useDropzone} from 'react-dropzone';
-import {useCallback,useEffect} from 'react';
+import {useCallback,useEffect,useState} from 'react';
 import Image from 'next/image';
 
 
@@ -26,7 +26,7 @@ const ImageUpload:REACT.FC<ImageUploadProps> = ({
 
         reader.onload = (event:any) => {
             setBase64(event.target.result);
-            handleChange(event.target,result);
+            handleChange(event.target.result);
         }
 
         reader.readAsDataURL(file);
