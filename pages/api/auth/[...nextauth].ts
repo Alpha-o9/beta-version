@@ -1,7 +1,7 @@
 import bcrypt from 'bcrypt';
 import NextAuth from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials';
-import {PrimsaAdapter} from '@/next-auth/prisma-adapter';
+import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import prisma from '@/libs/prismadb';
 
 export default NextAuth({
@@ -14,13 +14,13 @@ export default NextAuth({
                 password:{label:'password',type:'text'},
             },
             async authorize(credentials){
-                if(!credentials?.emial || !credentials?.password){
+                if(!credentials?.email || !credentials?.password){
                     throw new Error('Invalid Credentials');
                 }
 
                 const user = await prisma.user.findUnique({
                     where: {
-                        email: credential.email
+                        email: credentials.email
                     }
                 });
 
@@ -30,7 +30,7 @@ export default NextAuth({
 
                 const isCorrectPassword = await bcrypt.compare(
                     credentials.password,
-                    user.hashedpassword
+                    user.hashedPassword
                 );
 
 
@@ -49,5 +49,5 @@ export default NextAuth({
     jwt: {
         secret: process.env.NEXTAUTH_JWT_SECRET,
     },
-        secret: process.env.NEXTAUTH_SECRET
+        //secret: process.env.NEXTAUTH_SECRET
 });
