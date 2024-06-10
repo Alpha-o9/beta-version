@@ -5,7 +5,7 @@ interface InputProps{
     value?: string;
     type?: boolean;
     disabled?: boolean;
-    onChange:(event:React.ChangeEvent<HTMLInputElement>)=> void;
+    onChange:(event:React.ChangeEvent<HTMLInputElement>) => void;
   
 }
 
@@ -36,7 +36,7 @@ const Input:React.FC<InputProps> = ({
                 focus:border-sky-500
                 focus:border-2
                 transition
-                disabled:bg-natural-900
+                disabled:bg-neutral-900
                 disabled:opacity-70
                 disabled:cursor-not-allowed" 
         />
