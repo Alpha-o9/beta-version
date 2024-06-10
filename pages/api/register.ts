@@ -1,6 +1,5 @@
 import {NextApiRequest,NextApiResponse} from 'next';
 import bcrypt from 'bcrypt';
-
 import prisma from '@/libs/prismadb';
 
 export default async function handler(
@@ -29,6 +28,7 @@ export default async function handler(
         console.log(error)
         return res.status(400).end()
     }
-    
    
 }
+
+//console.log(Update)
