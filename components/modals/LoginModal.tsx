@@ -1,7 +1,8 @@
-
+import {useState,useCallback} from 'react';
+import { signIn } from 'next-auth/react';
 import useLoginModal from '@/hooks/useLoginModal';
 import useRegisterModal from '@/hooks/useRegisterModal';
-import {useState,useCallback} from 'react';
+
 
 import Input from '../Input';
 import Modal from '../Modal';
@@ -31,8 +32,7 @@ const LoginModal = () => {
             await signIn('credentials',{
                 email,
                 password
-            })            
-
+            });
             loginModal.onClose();
         }catch(error){
             console.log(error);

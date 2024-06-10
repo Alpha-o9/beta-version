@@ -11,7 +11,7 @@ export default NextAuth({
             name : 'credentials',
             credentials:{
                 email:{label:'email',type:'text'},
-                password:{label:'password',type:'text'},
+                password:{label:'password',type:'password'},
             },
             async authorize(credentials){
                 if(!credentials?.email || !credentials?.password){
@@ -49,5 +49,5 @@ export default NextAuth({
     jwt: {
         secret: process.env.NEXTAUTH_JWT_SECRET,
     },
-        //secret: process.env.NEXTAUTH_SECRET
+        secret: process.env.NEXTAUTH_SECRET
 });
