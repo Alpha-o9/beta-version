@@ -7,7 +7,7 @@ export default async function handler(
     req:NextApiResponse,
     res:NextApiRequest
 ){
-    if(req.method != 'PATCH'){
+    if(req.method !== 'PATCH'){
         return res.status(405).end();
     }
 

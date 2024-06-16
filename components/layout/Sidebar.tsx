@@ -1,6 +1,6 @@
 import React from 'react';
 import {signOut} from 'next-auth/react';
-
+import NextAuth from 'next-auth/next';
 
 import {BsHouseFill,BsBellFill} from 'react-icons/bs';
 import {FaUser} from 'react-icons/fa';
@@ -13,7 +13,7 @@ import { IoSearch } from "react-icons/io5";
 import SidebarLogo from './SidebarLogo';
 import SidebarItem from './SidebarItem';
 import useCurrentUser from '@/hooks/useCurrentUser';
-
+import SidebarTweetButton from './SidebarTweetButton';
 const Sidebar = ()=>{
     const {data:currentUser} = useCurrentUser
     const items = [
@@ -70,8 +70,9 @@ const Sidebar = ()=>{
                     />
                     ))}
                     {currentUser && ( 
-                        <SidebarItem onClick={()=>signOut} icon={BiLogOut} label = "LogOut" />
+                        <SidebarItem onClick={signOut} icon={BiLogOut} label = "LogOut" />
                     )}
+                    <SidebarTweetButton />
                 </div>
             </div>
         </div>
