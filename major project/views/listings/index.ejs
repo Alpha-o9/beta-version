@@ -1,0 +1,41 @@
+
+<% layout("/layouts/boilerplate") %>
+
+
+    <h3>All Faculty</h3>
+    <!-- <form method="GET" action="/listings/new">
+        <button>Create New Listing</button>
+    </form> -->
+    <div class="row row-cols-lg-3  row-col-md-2 row-cols-sm-2">
+    <% for(let listing of allListings) { %>
+      <% console.log('heheeh', listing) %>
+        
+      <a href="/listings/<%= listing._id %>" class="listing-link">
+
+      <div class="card col listing-card" style="width: 20rem;">
+            <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image" style="height: 20rem">
+           
+            <div class="card-img-overlay"></div>
+
+            <div class="card-body">
+              <p class="card-text">
+                <b><%= listing.title %></b> <br>
+              
+              
+            </p>
+            </div>
+          
+          </div>
+        </a>
+    <% } %>
+</div>
+
+
+
+    
+
+   
+
+
+
+   
