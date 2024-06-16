@@ -80,7 +80,7 @@ const RegisterModal = ()=>{
                 placeholder = "Password"
                 onChange = {(e)=>setPassword(e.target.value)}
                 value = {password}
-                type = 'password'
+                //type = 'password'
                 disabled = {isLoading}
                 />
         </div>
