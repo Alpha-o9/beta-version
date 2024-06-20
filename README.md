@@ -1,68 +1,78 @@
-<h1 align="center" id="title">Alpha</h1>
+# LinkedIn Clone
 
-<p align="center"><img src="https://socialify.git.ci/Alpha-o9/beta-version/image?description=1&amp;font=Source%20Code%20Pro&amp;forks=1&amp;issues=1&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Circuit%20Board&amp;pulls=1&amp;stargazers=1&amp;theme=Dark" alt="project-image"></p>
+![LinkedIn Clone Demo](linkedin-gif.gif)
 
-## Getting Started
+**_Built using React JS, Redux, Firebase & Styled-Components_** within a week. My first project after learning React JS referencing a tutorial on YouTube by _'Clever Programmer'_. Added some features apart from the tutorial on my own like:
 
+-   Post like functionality
+-   Mobile responsiveness
 
-<p id="description">Alpha is your go-to social networking platform for connecting with fellow college mates and faculty members. Stay updated on college announcements events and projects. Collaborate share ideas and find teammates for hackathons and competitions. Join Alpha and be part of your college's vibrant online community!</p>
+## Features and Fuctionality
 
-  
-  
-<h2>🧐 Features</h2>
+-   Login using Google (Firebase Authentication)
+-   Create a new post
+-   Share photos and videos (React player for videos)
+-   Like posts
+-   Realtime update likes and posts
+-   Auto authenticate user on refresh
+-   Sign Out
 
-Here're some of the project's best features:
+## How to build your own..?
 
-*   Social Networking Platform
-*   User Profiles
-*   Connect with Peers
-*   Faculty Interaction
-*   Post Sharing
-*   Announcements and Events
-*   Project and Research Showcase
-*   Collaborative Projects
-*   Hackathon and Competition Participation
-*   Notifications
-*   Customizable Feeds
-*   Search and Discovery
-*   Responsive Design
-*   Secure and Private
-*   Feedback and Support
+1. Clone this repo
+1. Install all the dependencies
+    ```bash
+    npm i
+    ```
+1. Setup Firebase
 
-<h2>🛠️ Installation Steps:</h2>
+    - Create Firebase account
+    - Create a new project
+    - Create a web app for that
+    - Copy your config from there
 
-<p>1. Install all the Packages</p>
+        - Select config option
+        - Paste those config inside firebase/config.js file
 
-```
-npm install
-or
-npm i
-```
-<p>2. Run run the development server:</p>
+    - Setup authentication using Google
 
-```
-npm run dev
-```
+1. Tweak code as you like
+1. Let's build the optimized version
 
-<p>3. Open localhost with your browser to see the result.</p>
+    ```bash
+    npm run build
+    ```
 
-```
-http://localhost:3000
-```
+1. **Now for hosting on Firebase lets config Firebase locally**
 
-<h2>🍰 Contribution Guidelines:</h2>
+    - Install Firebase CLI
+    - Login to Firebase
 
-Please contribute using GitHub Flow. Create a branch add commits and open a pull request.
+        ```bash
+        firebase login
+        ```
 
-  
-  
-<h2>💻 Built with</h2>
+    - Initialize Firebase
 
-Technologies used in the project:
+        ```bash
+        firebase init
+        ```
 
-*   React
-*   Next.js
-*   Tailwind.css
-*   Firebase
-*   MonogoDB
-*   Prisma
+    - Select hosting in the menu
+    - Select your respective project from the list
+    - Select 'build' as your hosting directory and other options as you want
+    - Let's deploy our clone and make it live
+
+        ```bash
+        firebase deploy
+        ```
+
+**That's it our clone is up and running share it now**
+
+## Future Plans
+
+-   Might add more login methods
+-   Post deleting functionality
+-   Add comments on post
+
+**_NOTE: PLEASE LET ME KNOW IF YOU DISCOVERED ANY BUG OR YOU HAVE ANY SUGGESTIONS_**
