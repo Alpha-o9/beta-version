@@ -60,7 +60,6 @@ Please contribute using GitHub Flow. Create a branch add commits and open a pull
 
 Technologies used in the project:
 
-*   React
 *   Next.js
 *   Tailwind.css
 *   NextAuth
